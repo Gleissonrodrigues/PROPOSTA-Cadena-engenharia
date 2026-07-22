@@ -268,7 +268,7 @@ export default function App() {
 
           <motion.div
             variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {/* SERVIÇO 01 */}
             <motion.div variants={cardReveal} className="flex h-full">
@@ -389,6 +389,46 @@ export default function App() {
                 </div>
               </Card>
             </motion.div>
+
+            {/* SERVIÇO 04 */}
+            <motion.div variants={cardReveal} className="flex h-full">
+              <Card className="border border-slate-100 rounded-[2rem] bg-white overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col w-full text-left">
+                <div className="p-8 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-6">
+                      <span className="text-xs font-mono font-bold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">Serviço 04</span>
+                      <Badge className="bg-pink-50 text-pink-600 border border-pink-100 font-mono text-[9px] uppercase tracking-wider">GESTÃO DE REDE SOCIAL</Badge>
+                    </div>
+                    <div className="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center mb-4 text-pink-600">
+                      <Instagram className="w-5 h-5" />
+                    </div>
+                    <h3 className="font-extrabold text-xl text-[#0D1F4C] mb-3">Gestão de Rede Social - Instagram</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-6 font-light">
+                      Um perfil ativo e profissional é o seu melhor cartão de visitas. Desenvolvemos o posicionamento estratégico no Instagram para atrair clientes qualificados, transformando visualizações em orçamentos para projetos de energia solar e engenharia elétrica.
+                    </p>
+                    <ul className="space-y-3 text-slate-600 text-[13px] font-light">
+                      {[
+                        "Criação de linha editorial estratégica focada na economia na conta e instalações reais",
+                        "Design de posts para feed e carrosséis educativos sobre homologação, ROI e equipamentos",
+                        "Planejamento de Reels dinâmicos mostrando obras em campo, painéis solares e projetos elétricos",
+                        "Roteirização de Stories diários para humanizar a marca, tirar dúvidas e gerar autoridade",
+                        "Otimização completa do perfil (Bio atrativa, destaques organizados e links de orçamento)"
+                      ].map((feat, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mt-8 pt-4 border-t border-slate-100">
+                    {["Instagram", "Mídias Sociais", "Energia Solar", "Engenharia Elétrica"].map((tag, idx) => (
+                      <span key={idx} className="text-[10px] font-bold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -440,7 +480,7 @@ export default function App() {
                   <div className="flex items-baseline mt-1 flex-wrap">
                     <span className="text-xs sm:text-sm font-medium text-red-400 line-through decoration-red-400 mr-2">R$ 2.000,00</span>
                     <span className="text-sm font-medium text-blue-300 mr-1">R$</span>
-                    <span className="text-2xl sm:text-3xl font-black text-[#dde1eb] tracking-tight">1.700,00</span>
+                    <span className="text-2xl sm:text-3xl font-black text-[#dde1eb] tracking-tight">1.200,00</span>
                     <span className="text-blue-300 text-xs font-mono ml-2">/mês</span>
                   </div>
                 </div>
@@ -462,10 +502,10 @@ export default function App() {
                 <ul className="space-y-3 text-slate-200 text-xs font-light leading-relaxed">
                   {[
                     "CAMPANHAS PROFISSIONAIS NO METAS ADS OU GOOGLE ADS",
-                    "ATÉ 5 CAMPANHAS ATIVAS SIMULTÂNEAMENTE",
+                    "ATÉ 2 CAMPANHAS ATIVAS SIMULTÂNEAMENTE",
                     "REMARKETING ATIVO PARA QUEM INTERAGIU",
                     "SEGMENTAÇÕES AVANÇADAS (BAIRROS NOBRES/ALTO PADRÃO)",
-                    "ATÉ 10 CRIATIVOS MENSAIS EXCLUSIVOS",
+                    "ATÉ 5 CRIATIVOS MENSAIS EXCLUSIVOS",
                     "REUNIÃO MENSAL DE PLANEJAMENTO & RESULTADOS",
                     "RELATÓRIO DETALHADO DE DESEMPENHO E ROI",
                     "🎁 EXCLUSIVO: 1 CAPTAÇÃO DE VÍDEO TOTALMENTE GRÁTIS",
@@ -495,7 +535,7 @@ export default function App() {
               {/* Button */}
               <div className="mt-8 pt-6 border-t border-white/10">
                 <a
-                  href={`https://wa.me/5587996475257?text=${encodeURIComponent("Olá! Tenho interesse no Plano Growth da Cadena de R$ 1.700,00/mês para tráfego pago.")}`}
+                  href={`https://wa.me/5587996475257?text=${encodeURIComponent("Olá! Tenho interesse no Plano Growth da Cadena de R$ 1.200,00/mês para tráfego pago.")}`}
                   className={`w-full text-center inline-flex items-center justify-center font-extrabold text-xs py-4 px-6 rounded-2xl transition-all duration-300 ${
                     selectedPlan === "growth"
                       ? "bg-[#185FA5] text-white hover:bg-blue-600 shadow-md shadow-blue-500/10"

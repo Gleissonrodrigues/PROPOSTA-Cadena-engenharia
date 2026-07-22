@@ -315,14 +315,14 @@ const AetherFlowHero = () => {
                             variants={fadeUpVariants}
                             initial="hidden"
                             animate="visible"
-                            className="relative w-full max-w-[400px] aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_25px_50px_rgba(0,0,0,0.6)] group bg-[#1B2213]"
+                            className="relative w-full max-w-[400px] aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_25px_50px_rgba(0,0,0,0.6)] group bg-[#19280B]"
                         >
                             {/* Inner Background Image - contained so logo text is fully visible */}
                             <img 
-                                src="/src/assets/images/cadena_logo_clean.png" 
+                                src="https://i.ibb.co/wFw2gkyn/f8dee9a7-f7d0-4f05-9f7f-617730278bcc.jpg" 
                                 alt="Cadena Engenharia Elétrica Branding" 
                                 referrerPolicy="no-referrer"
-                                className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700"
+                                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
 
                             {/* Floating Stats Content - Sleek Top Badge to avoid obstruction */}
